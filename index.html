@@ -1,15 +1,86 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>HW5</title>
-		<style>
-			body { margin: 0; }
-		</style>
-		<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js'></script>
-	</head>
-	<body>
-		<script src="src/hw5.js" type="module"></script>
+  <head>
+    <meta charset="utf-8">
+    <title>HW5</title>
+    <style>
+      body { margin: 0; background: #000; }
 
-	</body>
+      .ui-container {
+        position: absolute;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.8);
+      }
+
+      /* Score Display Styles */
+      #score-display {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ff69b4; /* hot pink */
+        color: white;
+        text-align: center;
+      }
+
+      #score-display h2 {
+        margin: 0 0 5px 0;
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+
+      #score-display p {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      /* Controls Display Styles */
+      #controls-display {
+        bottom: 20px;
+        left: 20px;
+        background-color: rgba(255, 105, 180, 0.8); /* semi-transparent hot pink */
+        color: white;
+      }
+
+      #controls-display h3 {
+        margin: 0 0 5px 0;
+        font-size: 16px;
+        border-bottom: 1px solid white;
+        padding-bottom: 3px;
+      }
+
+      #controls-display p {
+        margin: 4px 0;
+      }
+    </style>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js'></script>
+  </head>
+
+  <body>
+    <!-- Score Display (Top Center) -->
+    <div id="score-display" class="ui-container">
+      <h2>🏀 Live Score 🏀</h2>
+      <p id="score-value">Team A: 0 | Team B: 0</p>
+    </div>
+
+    <!-- Controls Display (Bottom Left) -->
+    <div id="controls-display" class="ui-container">
+      <h3>Controls</h3>
+      <p>O - Toggle camera orbit</p>
+    </div>
+
+    <!-- Your main script -->
+    <script src="src/hw5.js" type="module"></script>
+
+    <!-- Script to set random score initially -->
+    <script>
+      const scoreA = Math.floor(Math.random() * 100);
+      const scoreB = Math.floor(Math.random() * 100);
+      document.getElementById('score-value').innerText = `Team A: ${scoreA} | Team B: ${scoreB}`;
+    </script>
+  </body>
 </html>
