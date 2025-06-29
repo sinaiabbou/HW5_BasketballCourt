@@ -68,6 +68,7 @@ function createBasketballCourt() {
   createThreePointArc(-15, -Math.PI / 2); // left side
   createThreePointArc(15, Math.PI / 2);  // right side
 
+  // Hoops
   function createBasketballHoop(side) {
     const hoopGroup = new THREE.Group();
   
@@ -136,6 +137,7 @@ function createBasketballCourt() {
   createBasketballHoop(-1); // left hoop
   createBasketballHoop(1);  // right hoop  
 
+  // Basketball in the center
   function createBasketball() {
     const radius = 0.24;
     const ballGeo = new THREE.SphereGeometry(radius, 64, 64);

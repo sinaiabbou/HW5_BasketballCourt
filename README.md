@@ -33,10 +33,10 @@
 
 ## Screenshots
 
-All mandatory screenshots are located in the **`images/`** folder:
+All mandatory screenshots are located in the **`Images/`** folder:
 
-- Overall view of the court
-- Close-up of hoop & net
+- Overall view of the court from side and up
+- Close-up of hoop 
 - Basketball at center court
 
 ---
